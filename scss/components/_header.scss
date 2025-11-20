@@ -1,0 +1,34 @@
+.header-container {
+  position: absolute;
+  width: 100%;
+  margin-top: 20px;
+  align-items: baseline;
+  display: flex;
+  z-index: 1;
+  color: var(---primary-color-light);
+}
+
+.header-navigation {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    gap: 80px;
+    cursor: pointer;
+  }
+}
+
+.navigation-list {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 40px;
+  margin-left: auto;
+}
+
+.navigation-link {
+  color: var(---primary-color-light);
+}
+.navigation-link:focus,
+.navigation-link:active {
+  color: var(---primary-color-light);
+  text-decoration: underline;
+}
