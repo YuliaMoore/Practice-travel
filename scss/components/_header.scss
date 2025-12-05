@@ -1,4 +1,4 @@
-.header-container {
+.header {
   position: absolute;
   width: 100%;
   margin-top: 20px;
@@ -8,12 +8,20 @@
   color: var(---primary-color-light);
 }
 
+.header-container {
+  display: flex;
+
+  @media screen and (min-width: 1440px) {
+    justify-content: space-between;
+  }
+}
+
 .header-navigation {
   display: none;
+  cursor: pointer;
   @media screen and (min-width: 1440px) {
     display: flex;
-    gap: 80px;
-    cursor: pointer;
+    margin-left: auto;
   }
 }
 

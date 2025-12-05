@@ -50,11 +50,10 @@
 
   @media screen and (min-width: 1440px) {
     display: flex;
-    justify-content: flex-end;
     flex-direction: column;
     gap: 32px;
     position: absolute;
-    right: 0;
+    left: 88%;
     top: 649px;
   }
 }
