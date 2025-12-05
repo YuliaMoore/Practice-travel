@@ -1,0 +1,18 @@
+.advantages-section {
+  background-image: url(../../images/Advantages.jpg);
+  background-repeat: no-repeat;
+  @media screen and (min-width: 1440px) {
+    background-image: url(../../images/advantages/Advantages_1_desc.jpg),
+      url(../../images/advantages/Advantages_2_desc.jpg),
+      url(../../images/advantages/Advantages_3_desc.jpg);
+  }
+}
+.advantages-list {
+  width: 630px;
+  height: 64px;
+  background-color: var(---primary-color-blue);
+  color: var(---primary-color-light);
+  align-content: center;
+  margin-bottom: 24px;
+  padding-left: 126px;
+}

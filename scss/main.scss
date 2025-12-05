@@ -3,9 +3,12 @@
 @use "./utils/mixins";
 @use "./utils/variables";
 @use "./utils/body";
+@use "./utils/section";
 @use "./utils/container";
 @use "./utils/buttons";
+@use "./utils/title";
 
 @use "./utils/modal";
 @use "./components/header";
 @use "./components/hero";
+@use "./components/advantages";

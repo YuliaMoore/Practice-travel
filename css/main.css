@@ -92,6 +92,10 @@ body {
   color: var(---secondary-color-dark);
 }
 
+.section {
+  margin: 80px auto;
+}
+
 .container {
   margin: auto;
 }
@@ -118,12 +122,42 @@ body {
   color: var(---primary-color-light);
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 24px;
   border: 1px solid var(---primary-color-blue);
+}
+@media screen and (min-width: 1440px) {
+  .button {
+    font-size: 24px;
+  }
 }
 
 .hero-button {
-  padding: 20px 199px;
+  padding: 15px 91px;
+  font-size: 16px;
+  line-height: 22px;
+}
+@media screen and (min-width: 768px) {
+  .hero-button {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero-button {
+    font-size: 24px;
+    line-height: 29.26px;
+    padding: 20px 199px;
+  }
+}
+
+.tours-button {
+  padding: 20px 75px;
+}
+
+.title {
+  font-size: 68px;
+  color: var(---primary-color-text);
+  margin-bottom: 80px;
+  text-align: center;
 }
 
 .modal {
@@ -196,6 +230,9 @@ body {
     background-image: url(../../images/hero_desk_1920\(1\).jpg);
     height: 1024px;
     width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -204,8 +241,10 @@ body {
 }
 @media screen and (min-width: 1440px) {
   .hero-title {
+    font-weight: 400;
+    width: 1140px;
     font-size: 88px;
-    line-height: 107.27px;
+    line-height: 100%;
     padding-top: 280px;
     margin-bottom: 40px;
   }
@@ -230,4 +269,47 @@ body {
     font-size: 28px;
     line-height: 34.13px;
   }
+}
+
+.social-list {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    right: 0;
+    top: 649px;
+  }
+}
+
+.advantages-section {
+  background-image: url(../../images/Advantages.jpg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 1440px) {
+  .advantages-section {
+    background-image: url(../../images/advantages/Advantages_1_desc.jpg), url(../../images/advantages/Advantages_2_desc.jpg), url(../../images/advantages/Advantages_3_desc.jpg);
+  }
+}
+
+.advantages-list {
+  width: 630px;
+  height: 64px;
+  background-color: var(---primary-color-blue);
+  color: var(---primary-color-light);
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-bottom: 24px;
+  padding-left: 126px;
 }/*# sourceMappingURL=main.css.map */
