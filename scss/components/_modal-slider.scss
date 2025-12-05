@@ -1,0 +1,73 @@
+/* Контейнер модального слайдера */
+.slider-modal {
+  padding: 0;
+  overflow: hidden;
+  max-width: 1170px;
+  max-height: 976px;
+}
+
+/* Слайдер */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 742px;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  width: 300%;
+  transition: transform 0.4s ease;
+}
+
+/* Кожен слайд */
+.slide {
+  height: 742px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Текст поверх картинки */
+.slide-text {
+  padding-left: 100px;
+  margin-top: 108px;
+  color: var(---primary-color-light);
+  max-width: 477px;
+}
+
+.slide-title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.slide-day {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  background-color: var(---primary-color-blue);
+  margin-bottom: 16px;
+}
+
+.slide-day-activity {
+  gap: 16px;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #c8c8c8;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #222;
+}

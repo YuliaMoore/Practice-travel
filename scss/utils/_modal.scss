@@ -1,9 +1,57 @@
+/* ===== БЕКДРОП ===== */
 .modal {
   display: none;
   position: fixed;
-  inset: 0;
+  inset: 0; /* top:0 left:0 right:0 bottom:0 */
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px); /* трохи блюр фону */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
 }
+
 .modal.active {
-  display: block;
+  display: flex;
+}
+
+/* ===== МОДАЛЬНЕ ВІКНО ===== */
+.modal-content {
+  background: var(---primary-color-light);
+  padding: 35px 25px;
+  // border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  animation: modal-show 0.3s ease-out;
+}
+
+/* Анімація появи */
+@keyframes modal-show {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Кнопка закриття */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 555;
+}
+
+.modal-close svg {
+  width: 28px;
+  height: 28px;
+  color: var(---secondary-color-dark);
 }

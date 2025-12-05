@@ -1,5 +1,5 @@
-@use "./base";
 @use "./utils/fonts";
+@use "./base";
 @use "./utils/mixins";
 @use "./utils/variables";
 @use "./utils/body";
@@ -7,11 +7,15 @@
 @use "./utils/container";
 @use "./utils/buttons";
 @use "./utils/title";
-
 @use "./utils/modal";
 @use "./components/header";
 @use "./components/hero";
 @use "./components/advantages";
+@use "./components/rewievs";
 @use "./components/tours";
 @use "./components/gallery";
-@use " ./components/about";
+@use "./components/about";
+@use "./components/questions";
+@use "./components/footer";
+@use "./components/_modal-booking";
+@use "./components/modal-slider";
