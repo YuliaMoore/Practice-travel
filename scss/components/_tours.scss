@@ -1,5 +1,6 @@
 .tours-list {
   display: flex;
+  gap: 20px;
 }
 
 .tours-slide {
@@ -23,5 +24,11 @@
   }
   @media screen and (min-width: 1440px) {
     width: 377px;
+  }
+}
+
+.tours-button {
+  @media screen and (min-width: 1440px) {
+    margin-left: 20px;
   }
 }
