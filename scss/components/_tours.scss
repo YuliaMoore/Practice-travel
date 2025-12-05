@@ -29,7 +29,7 @@
 
 .tour-title {
   font-weight: 600;
-  color: #1b1d1b;
+  color: var(---primary-color-text);
   margin-bottom: 20px;
   text-align: left;
   margin-left: 20px;
@@ -50,7 +50,7 @@
 .tour-price {
   font-weight: 600;
 
-  color: #202321;
+  color: var(---secondary-color-dark);
   margin-bottom: 36px;
   text-align: left;
   margin-left: 20px;
@@ -71,8 +71,8 @@
 .tour-button {
   font-weight: 500;
 
-  color: #f7fbfb;
-  background-color: #5b86a1;
+  color: var(---primary-color-light);
+  background-color: var(---primary-color-blue);
   margin-bottom: 48px;
 
   font-size: 16px;
