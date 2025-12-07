@@ -2,12 +2,21 @@
 // import "./slider.js";
 
 // ======== Відкриття модалок ========
+let activeModal = null; // зберігає активну модалку
 
 document.querySelectorAll("[data-modal-open]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const id = btn.dataset.modalOpen;
     const modal = document.getElementById(id);
+
+    // Закриваємо попередню активну модалку, якщо вона існує
+    if (activeModal && activeModal !== modal) {
+      activeModal.classList.remove("active");
+    }
+
+    // Відкриваємо цільову модалку
     modal.classList.add("active");
+    activeModal = modal;
 
     // Ініціалізуємо Swiper при відкритті
     if (!modal.dataset.swiperInited) {
@@ -17,22 +26,27 @@ document.querySelectorAll("[data-modal-open]").forEach((btn) => {
   });
 });
 
-// Закриття
+// ======== Закриття модалок ========
 document.querySelectorAll("[data-modal-close]").forEach((btn) => {
   btn.addEventListener("click", () => {
-    btn.closest(".modal").classList.remove("active");
+    const modal = btn.closest(".modal");
+    modal.classList.remove("active");
+
+    if (activeModal === modal) activeModal = null;
   });
 });
 
 // Клік поза модалкою
 document.querySelectorAll(".modal").forEach((modal) => {
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) modal.classList.remove("active");
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      if (activeModal === modal) activeModal = null;
+    }
   });
 });
 
 // ======== Ініціалізація Swiper для модальних вікон ========
-
 function initModalSwiper(id) {
   new Swiper(`#${id} .modal-swiper`, {
     loop: false,

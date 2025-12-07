@@ -1,39 +1,64 @@
-.gallery-container {
-  width: 450px;
-  margin: 0 auto;
-  text-align: center;
+.swiper-image {
+  height: 480px;
+  width: 280px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 275px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 575px;
+    height: 445px;
+  }
 }
 
-.gallery {
+.swiper-slide {
+  margin-bottom: 40px;
+}
+
+.gallery-buttons-wrap {
   display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  margin-left: 141px;
+  margin-top: 24px;
+  @media screen and (min-width: 768px) {
+    margin-left: 312px;
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 515px;
+    margin-top: 40px;
+  }
 }
 
-.gallery img {
-  width: 200px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.controls button {
-  padding: 8px 16px;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  background: #333;
+.gallery-button-prev,
+.gallery-button-next {
+  fill: rgba(91, 134, 161, 1);
   color: white;
-  border-radius: 4px;
-  // transition: background .3s;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 
-.controls button:hover {
-  background: #555;
+.gallery-button-prev {
+  margin-left: 40px;
+  @media screen and (min-width: 1440px) {
+    margin-left: 60px;
+  }
 }
 
-.controls button:disabled {
-  background: #aaa;
+/* Коли кнопка активна */
+.gallery-button-next:not(.swiper-button-disabled),
+.gallery-button-prev:not(.swiper-button-disabled),
+.tours-button-next:not(.swiper-button-disabled),
+.tours-button-prev:not(.swiper-button-disabled) {
+  fill: rgba(91, 134, 161, 1); /* Активна кнопка — синій */
+  cursor: pointer;
+}
+
+/* Коли кнопка неактивна */
+.gallery-button-next.swiper-button-disabled,
+.gallery-button-prev.swiper-button-disabled,
+.tours-button-next.swiper-button-disabled,
+.tours-button-prev.swiper-button-disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }

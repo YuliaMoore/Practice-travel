@@ -90,6 +90,9 @@ body {
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(---secondary-color-dark);
 }
 
@@ -314,6 +317,12 @@ body {
 
 .navigation-link {
   color: var(---primary-color-light);
+  margin-left: 80px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
 }
 
 .navigation-link:focus,
@@ -400,6 +409,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 768px) {
   .hero-button {
@@ -769,47 +781,81 @@ body {
   }
 }
 
-.gallery-container {
-  width: 450px;
-  margin: 0 auto;
-  text-align: center;
+.swiper-image {
+  height: 480px;
+  width: 280px;
+}
+@media screen and (min-width: 768px) {
+  .swiper-image {
+    width: 354px;
+    height: 275px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .swiper-image {
+    width: 575px;
+    height: 445px;
+  }
 }
 
-.gallery {
+.swiper-slide {
+  margin-bottom: 40px;
+}
+
+.gallery-buttons-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  margin-left: 141px;
+  margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .gallery-buttons-wrap {
+    margin-left: 312px;
+    margin-top: 32px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .gallery-buttons-wrap {
+    margin-left: 515px;
+    margin-top: 40px;
+  }
 }
 
-.gallery img {
-  width: 200px;
-  height: 140px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 6px;
-}
-
-.controls button {
-  padding: 8px 16px;
-  font-size: 20px;
-  cursor: pointer;
-  border: none;
-  background: #333;
+.gallery-button-prev,
+.gallery-button-next {
+  fill: rgb(91, 134, 161);
   color: white;
-  border-radius: 4px;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.controls button:hover {
-  background: #555;
+.gallery-button-prev {
+  margin-left: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .gallery-button-prev {
+    margin-left: 60px;
+  }
 }
 
-.controls button:disabled {
-  background: #aaa;
+/* Коли кнопка активна */
+.gallery-button-next:not(.swiper-button-disabled),
+.gallery-button-prev:not(.swiper-button-disabled),
+.tours-button-next:not(.swiper-button-disabled),
+.tours-button-prev:not(.swiper-button-disabled) {
+  fill: rgb(91, 134, 161); /* Активна кнопка — синій */
+  cursor: pointer;
+}
+
+/* Коли кнопка неактивна */
+.gallery-button-next.swiper-button-disabled,
+.gallery-button-prev.swiper-button-disabled,
+.tours-button-next.swiper-button-disabled,
+.tours-button-prev.swiper-button-disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
