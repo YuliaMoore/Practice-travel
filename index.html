@@ -146,8 +146,8 @@
           </ul>
         </div>
       </section>
-      <section class="reviews container">
-        <h2 id="reviews">Reviews</h2>
+      <section class="reviews container section">
+        <h2 class="title" id="reviews">Reviews</h2>
         <ul class="reviews-list">
           <li class="review-item">
             <div class="review-card center">
@@ -225,7 +225,7 @@
           </li>
         </ul>
       </section>
-      <section class="section">
+      <section class="section gallery">
         <div class="gallery-container container">
           <h2 class="title">Gallery</h2>
           <div class="swiper mySwiper">
@@ -454,8 +454,8 @@
           </div>
         </div>
       </section>
-      <section class="questions">
-        <div class="questions-card">
+      <section class="questions section">
+        <div class="questions-card container">
           <h3 class="questions-title">Do you have any questions?</h3>
           <p class="questions-text">
             You can leave your questions here and our manager will call you back
@@ -547,6 +547,7 @@
       <p class="footer-text">©Сreated by LelekaSoft</p>
     </footer>
 
+    <!--Модальне вікно 1-->
     <div class="modal" id="modal1">
       <div class="modal-content modal-booking">
         <button class="modal-close" data-modal-close>
@@ -598,7 +599,9 @@
     <!--Модальне вікно 2-->
     <div class="modal" id="modal2">
       <div class="modal-content slider-modal">
-        <button class="modal-close" data-modal-close>✖</button>
+        <button class="modal-close slider-modal-close" data-modal-close>
+          ✖
+        </button>
 
         <!-- Swiper Wrapper -->
         <div class="swiper modal-swiper">
@@ -667,13 +670,15 @@
 
         <!-- Нижній блок -->
         <div class="slider-bottom">
-          <button class="btn book-btn" data-modal-open="modal1">
+          <p class="modal-price-txt">UAH 4,499/person</p>
+          <button class="button book-btn" data-modal-open="modal1">
             Book this tour
           </button>
         </div>
       </div>
     </div>
 
+    <!--Модальне вікно 3-->
     <div class="modal" id="modal3">
       <div class="modal-content slider-modal">
         <button class="modal-close" data-modal-close>✖</button>
@@ -762,16 +767,20 @@
 
         <!-- Нижній блок -->
         <div class="slider-bottom">
-          <button class="btn book-btn" data-modal-open="modal1">
+          <p class="modal-price-txt">UAH 4,499/person</p>
+          <button class="button book-btn" data-modal-open="modal1">
             Book this tour
           </button>
         </div>
       </div>
     </div>
 
+    <!--Модальне вікно 4-->
     <div class="modal" id="modal4">
       <div class="modal-content slider-modal">
-        <button class="modal-close" data-modal-close>✖</button>
+        <button class="modal-close slider-modal-close" data-modal-close>
+          ✖
+        </button>
         <!-- Swiper Wrapper -->
         <div class="swiper modal-swiper">
           <div class="swiper-wrapper">
@@ -913,7 +922,8 @@
 
         <!-- Нижній блок -->
         <div class="slider-bottom">
-          <button class="btn book-btn" data-modal-open="modal1">
+          <p class="modal-price-txt">UAH 4,499/person</p>
+          <button class="button book-btn" data-modal-open="modal1">
             Book this tour
           </button>
         </div>

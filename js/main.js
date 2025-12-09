@@ -60,3 +60,25 @@ function initModalSwiper(id) {
     },
   });
 }
+
+// ======= SWIPER ДЛЯ ГАЛЕРЕЇ =======
+new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+
+  navigation: {
+    nextEl: ".gallery-button-next",
+    prevEl: ".gallery-button-prev",
+  },
+
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    1440: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+    },
+  },
+});

@@ -1353,6 +1353,10 @@ label .modal-tours-check {
   max-height: 976px;
 }
 
+.slider-modal-close {
+  color: var(---primary-color-light);
+}
+
 /* Слайдер */
 .slider {
   position: relative;
@@ -1373,8 +1377,14 @@ label .modal-tours-check {
 }
 
 /* Кожен слайд */
-.slide {
+.modal-swiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
   height: 742px;
+}
+
+.slide {
+  height: 752px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1422,4 +1432,27 @@ label .modal-tours-check {
 
 .swiper-pagination-bullet-active {
   background: #222;
+}
+
+.slider-bottom {
+  margin: 0 auto;
+}
+
+.modal-price-txt {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(---secondary-color-dark);
+  margin-top: 48px;
+  margin-bottom: 28px;
+}
+
+.book-btn {
+  padding: 20px 199px;
+  color: var(---primary-color-light);
+  border: 1px solid var(---primary-color-blue);
+  background-color: var(---primary-color-blue);
 }/*# sourceMappingURL=main.css.map */
