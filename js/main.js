@@ -48,16 +48,37 @@ document.querySelectorAll(".modal").forEach((modal) => {
 
 // ======== Ініціалізація Swiper для модальних вікон ========
 function initModalSwiper(id) {
-  new Swiper(`#${id} .modal-swiper`, {
+  const swiper = new Swiper(`#${id} .modal-swiper`, {
     loop: false,
-    navigation: {
-      nextEl: `#${id} .swiper-button-next`,
-      prevEl: `#${id} .swiper-button-prev`,
-    },
     pagination: {
       el: `#${id} .swiper-pagination`,
       clickable: true,
     },
+    navigation: {
+      nextEl: `#${id} .swiper-button-next`,
+      prevEl: `#${id} .swiper-button-prev`,
+    },
+    on: {
+      init() {
+        updateBullets(id, this.activeIndex);
+      },
+      slideChange() {
+        updateBullets(id, this.activeIndex);
+      },
+    },
+  });
+}
+
+/* Логіка підсвічування всіх кружечків до активного */
+function updateBullets(id, activeIndex) {
+  const bullets = document.querySelectorAll(`#${id} .swiper-pagination-bullet`);
+
+  bullets.forEach((bullet, index) => {
+    if (index <= activeIndex) {
+      bullet.classList.add("active-chain");
+    } else {
+      bullet.classList.remove("active-chain");
+    }
   });
 }
 

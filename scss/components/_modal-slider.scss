@@ -55,17 +55,27 @@
   margin-bottom: 19px;
 }
 
+.highlight {
+  width: calc(100% + 100px); /* 100px = padding-left батька */
+  margin-left: -100px; /* компенсуємо padding */
+  height: 48px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  align-items: center;
+  background-color: var(---primary-color-blue);
+}
 .slide-day {
+  margin-left: 100px;
   font-weight: 500;
   font-size: 28px;
   line-height: 100%;
   letter-spacing: 0%;
-  background-color: var(---primary-color-blue);
   margin-bottom: 16px;
+  display: flex;
 }
 
 .slide-day-activity {
-  gap: 16px;
+  margin-bottom: 16px;
   font-weight: 500;
   font-size: 28px;
 }
@@ -81,7 +91,13 @@
   background: #222;
 }
 .slider-bottom {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column; /* версія для вертикального вирівнювання */
+  align-items: center; /* по горизонталі */
+  justify-content: center; /* по вертикалі */
   margin: 0 auto;
+  text-align: center; /* текст по центру */
 }
 .modal-price-txt {
   font-family: Montserrat;
@@ -95,8 +111,32 @@
   margin-bottom: 28px;
 }
 .book-btn {
+  margin-bottom: 60px;
   padding: 20px 199px;
   color: var(---primary-color-light);
   border: 1px solid var(---primary-color-blue);
   background-color: var(---primary-color-blue);
+}
+
+/* Позиція pagination — 40px від нижнього краю картинки */
+.modal-swiper .swiper-pagination {
+  position: absolute !important;
+  bottom: 60px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+/* Стиль кружечків */
+.modal-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #a3a5a3 !important; /* неактивні */
+  opacity: 1 !important;
+  margin: 0 6px !important;
+}
+
+/* Активні і всі попередні */
+.modal-swiper .swiper-pagination-bullet.active-chain {
+  background: #f7fbfb !important;
 }
